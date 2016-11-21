@@ -4,23 +4,107 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <style>
     body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    .line {
+      fill: none;
+      stroke: black;
+      stroke-width: 1.5px;
+    }
   </style>
 </head>
 
 <body>
-	<h1> Projet </h1>
-	<script>
+  <script>
     // Feel free to change or delete any of the code you see in this editor!
     var svg = d3.select("body").append("svg")
       .attr("width", 960)
       .attr("height", 500)
 
-    svg.append("text")
-      .text("Edit the code below to change me!")
-      .attr("y", 200)
-      .attr("x", 120)
-      .style("font-size", 36)
-      .style("font-family", "monospace")
+    var width = 800;
+    var height = 400;
+
+    // http://bl.ocks.org/zanarmstrong/raw/05c1e95bf7aa16c4768e/
+    var parseDate = d3.time.format("%Y-%m");
+    var displayDate = d3.time.format("%b %y");
+    var displayValue = d3.format(",.0f");
+    
+    // Ordinal scale
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], .5);
+
+    var y = d3.scale.linear()
+        .range([height, height - 200]);
+
+    var line = d3.svg.line()
+        .x(function(d) { return x(d.name); })
+        .y(function(d) { return y(d.value); });
+    
+    var g = svg.append("g")
+    	.attr("transform", "translate(10, 0)")
+    
+    //csv d3.csv("namefile", function(data) {})
+   	d3.csv("Data_rurales/Annees/station_a7-sud-lyonnais_5.csv", function(data) {
+
+	  console.log(data[0]);
+      // Pre-processing
+      data.forEach(function(d) {
+				d.value;// = +d.value;
+        d["date"] = parseDate.parse(d["date"]);
+      });
+      
+      x.domain(data.map(function(d) { return d.name; }));
+			y.domain([0, d3.max(data, function(d) { return d.value; })]);
+      
+      svg.selectAll("text").data(data).enter()
+       .append("text")
+        .text(function(d, i) { return displayDate(d.date); })
+        .attr("y", 420)
+        .attr("x", function(d) { return x(d.name); })
+        .style("font-size", 10)
+        .style("font-family", "monospace");
+
+      g.selectAll(".value").data([data[data.length -1]]).enter()
+       .append("text")
+        .text(function(d, i) { return displayValue(d.value); })
+        .attr("class", "value")
+        .attr("y", function(d) { return y(d.value); })
+        .attr("x", width - 20)
+        .style("font-size", 20)
+        .style("font-family", "monospace");
+
+      
+      //crochet = une ligne pour toutes les données et non une ligne par donné
+      g.selectAll("path").data([data]).enter().append("path")
+        .attr("class", "line")
+        .attr("d", line);
+
+      g.selectAll("circle").data(data).enter().append("circle")
+      	.attr("cx", function (d) { return x(d.name); })
+				.attr("cy", function (d) { return y(d.value); })
+				.attr("r", 5)
+				.style("fill", "grey")
+      	.on("mouseover", function(d) {
+          d3.select(this).style("fill", "red");
+          g.append("text")
+          	.text(d.value)
+          	.attr("id", "popup")
+            .attr("x", x(d.name)+5)
+            .attr("y", y(d.value)-15)
+            .style("font-size", 10);
+        	g.append("line")
+          	.attr("id", "popupLine")
+          	.attr("x1", x(d.name))
+          	.attr("y1", y(d.value)+5)
+          	.attr("x2", x(d.name))
+          	.attr("y2", height)
+          	.attr("stroke", "grey")
+          	.style("stroke-dasharray", ("1,2"))
+        })
+      	.on("mouseout", function(d) {
+          d3.select(this).transition().duration(500).style("fill", "grey");
+					g.select("#popup").remove();
+        	g.select("#popupLine").remove();
+      	});
+    });
 
   </script>
 </body>
