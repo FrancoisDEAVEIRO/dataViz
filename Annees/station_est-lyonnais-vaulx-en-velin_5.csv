@@ -1,0 +1,6 @@
+﻿Station;Polluant;Mesure;Unité;2011;2012;2013;2014;2015
+"Est lyonnais / Vaulx en Velin";"Dioxyde d'azote";"Dioxyde d'azote";microg/m3;27;24;25;25;23
+"Est lyonnais / Vaulx en Velin";"Monoxyde d'azote";"Monoxyde d'azote";microg/m3;16;10;11;11;14
+"Est lyonnais / Vaulx en Velin";Ozone;Ozone;microg/m3;45;43;45;46;48
+"Est lyonnais / Vaulx en Velin";"Particules PM10";"Particules PM10";microg/m3;27;-;23;21;24
+"Est lyonnais / Vaulx en Velin";"Particules PM2,5";"Particules PM2.5";microg/m3;-;-;16;13;14
