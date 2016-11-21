@@ -1,5 +1,5 @@
-﻿Station;Polluant;Mesure;Unité;"novembre 2015";"décembre 2015";"janvier 2016";"Février 2016";"mars 2016";"avril 2016";"mai 2016";"juin 2016";"juillet 2016";"août 2016";"septembre 2016";"octobre 2016"
-"A7 Sud lyonnais";"Dioxyde d'azote";"Dioxyde d'azote";microg/m3;75;72;69;72;70;68;62;63;66;60;61;55
-"A7 Sud lyonnais";"Monoxyde d'azote";"Monoxyde d'azote";microg/m3;113;121;91;89;75;66;53;63;49;40;49;73
-"A7 Sud lyonnais";"Particules PM10";"Particules PM10";microg/m3;41;46;31;30;33;21;20;24;27;22;30;26
-"A7 Sud lyonnais";"Particules PM2,5";"Particules PM2.5";microg/m3;26;32;20;20;23;12;12;10;10;9;16;19
+"﻿Station";"Polluant";"Mesure";"Unité";"novembre 2015";"décembre 2015";"janvier 2016";"Février 2016";"mars 2016";"avril 2016";"mai 2016";"juin 2016";"juillet 2016";"août 2016";"septembre 2016";"octobre 2016"
+"A7 Sud lyonnais";"Dioxyde d'azote";"Dioxyde d'azote";"microg/m3";"75";"72";"69";"72";"70";"68";"62";"63";"66";"60";"61";"55"
+"A7 Sud lyonnais";"Monoxyde d'azote";"Monoxyde d'azote";"microg/m3";"113";"121";"91";"89";"75";"66";"53";"63";"49";"40";"49";"73"
+"A7 Sud lyonnais";"Particules PM10";"Particules PM10";"microg/m3";"41";"46";"31";"30";"33";"21";"20";"24";"27";"22";"30";"26"
+"A7 Sud lyonnais";"Particules PM2,5";"Particules PM2.5";"microg/m3";"26";"32";"20";"20";"23";"12";"12";"10";"10";"9";"16";"19"

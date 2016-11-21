@@ -1,5 +1,5 @@
-﻿Station;Polluant;Mesure;Unité;2011;2012;2013;2014;2015
-Haut-Beaujolais;"Dioxyde d'azote";"Dioxyde d'azote";microg/m3;6;4;4;3;5
-Haut-Beaujolais;"Monoxyde d'azote";"Monoxyde d'azote";microg/m3;2;1;1;0;1
-Haut-Beaujolais;"Oxydes d'azote";"Oxydes d'azote";microg/m3;-;-;-;-;6
-Haut-Beaujolais;Ozone;Ozone;microg/m3;69;64;64;66;70
+"﻿Station";"Polluant";"Mesure";"Unité";"2011";"2012";"2013";"2014";"2015"
+"Haut-Beaujolais";"Dioxyde d'azote";"Dioxyde d'azote";"microg/m3";"6";"4";"4";"3";"5"
+"Haut-Beaujolais";"Monoxyde d'azote";"Monoxyde d'azote";"microg/m3";"2";"1";"1";"0";"1"
+"Haut-Beaujolais";"Oxydes d'azote";"Oxydes d'azote";"microg/m3";"-";"-";"-";"-";"6"
+"Haut-Beaujolais";"Ozone";"Ozone";"microg/m3";"69";"64";"64";"66";"70"

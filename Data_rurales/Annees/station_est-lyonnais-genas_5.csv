@@ -1,5 +1,5 @@
-﻿Station;Polluant;Mesure;Unité;2011;2012;2013;2014;2015
-"Est lyonnais / Genas";"Dioxyde d'azote";"Dioxyde d'azote";microg/m3;31;30;31;-;29
-"Est lyonnais / Genas";"Monoxyde d'azote";"Monoxyde d'azote";microg/m3;19;22;20;-;19
-"Est lyonnais / Genas";Ozone;Ozone;microg/m3;41;-;44;47;50
-"Est lyonnais / Genas";"Particules PM10";"Particules PM10";microg/m3;27;24;24;21;24
+"﻿Station";"Polluant";"Mesure";"Unité";"2011";"2012";"2013";"2014";"2015"
+"Est lyonnais / Genas";"Dioxyde d'azote";"Dioxyde d'azote";"microg/m3";"31";"30";"31";"-";"29"
+"Est lyonnais / Genas";"Monoxyde d'azote";"Monoxyde d'azote";"microg/m3";"19";"22";"20";"-";"19"
+"Est lyonnais / Genas";"Ozone";"Ozone";"microg/m3";"41";"-";"44";"47";"50"
+"Est lyonnais / Genas";"Particules PM10";"Particules PM10";"microg/m3";"27";"24";"24";"21";"24"

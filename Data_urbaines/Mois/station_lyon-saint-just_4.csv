@@ -1,4 +1,4 @@
-﻿Station;Polluant;Mesure;Unité;"novembre 2015";"décembre 2015";"janvier 2016";"Février 2016";"mars 2016";"avril 2016";"mai 2016";"juin 2016";"juillet 2016";"août 2016";"septembre 2016";"octobre 2016"
-"Lyon Saint-Just";"Dioxyde d'azote";"Dioxyde d'azote";microg/m3;45;45;31;27;28;23;20;18;19;22;26;34
-"Lyon Saint-Just";"Monoxyde d'azote";"Monoxyde d'azote";microg/m3;41;51;15;13;8;5;3;3;2;2;5;11
-"Lyon Saint-Just";Ozone;Ozone;microg/m3;17;18;25;33;42;53;59;51;61;61;58;26
+"﻿Station";"Polluant";"Mesure";"Unité";"novembre 2015";"décembre 2015";"janvier 2016";"Février 2016";"mars 2016";"avril 2016";"mai 2016";"juin 2016";"juillet 2016";"août 2016";"septembre 2016";"octobre 2016"
+"Lyon Saint-Just";"Dioxyde d'azote";"Dioxyde d'azote";"microg/m3";"45";"45";"31";"27";"28";"23";"20";"18";"19";"22";"26";"34"
+"Lyon Saint-Just";"Monoxyde d'azote";"Monoxyde d'azote";"microg/m3";"41";"51";"15";"13";"8";"5";"3";"3";"2";"2";"5";"11"
+"Lyon Saint-Just";"Ozone";"Ozone";"microg/m3";"17";"18";"25";"33";"42";"53";"59";"51";"61";"61";"58";"26"
