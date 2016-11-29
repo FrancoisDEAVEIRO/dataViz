@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    .province {
+        fill: #000;
+        stroke: #fff;
+        stroke-width: 1px;
+    }
+    .province:hover {
+        fill: #666;
+    }
+    .hidden {
+        display: none;
+    }
+    div.tooltip {
+        color: #222;
+        background-color: #fff;
+        padding: .5em;
+        text-shadow: #f5f5f5 0 1px 0;
+        border-radius: 2px;
+        opacity: 0.9;
+        position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    
+		var width = 800,
+  		  height = 800;
+
+		var svg = d3.select( "body" )
+  		.append( "svg" )
+		  .attr( "width", width )
+		  .attr( "height", height );
+
+    var tooltip = d3.select('body').append('div')
+    .attr('class', 'hidden tooltip');
+    
+    var projection = d3.geo.conicConformal().center([5.20, 46.0]).scale(42000);
+
+    var path = d3.geo.path()
+                 .projection(projection);
+    
+    var color = d3.scale.quantize()  
+         .range(["rgb(237,248,233)", "rgb(186,228,179)",
+         "rgb(116,196,118)", "rgb(49,163,84)", "rgb(0,109,44)"]);
+    
+
+      d3.json("rhone.geojson", function(json) {
+		color.domain([0, 250]);
+		var value = Math.floor((Math.random() * 250) + 1);
+        
+        svg.selectAll("path")
+             .data(json.features)
+             .enter()
+             .append("path")
+             .attr("d", path)
+             .style("fill", function(d) {
+                //on prend la valeur recupere plus haut
+                if (value) {
+                    return color(value);
+                } else {
+                    // si pas de valeur alors en gris
+					console.log("passe dans le else");
+                    return "#ccc";
+					
+                }
+            });
+        		
+
+			});
+  </script>
+</body>
