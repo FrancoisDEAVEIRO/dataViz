@@ -2,7 +2,10 @@
 <head>
   <meta charset="utf-8">
   <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />	
   <style>
+  
     body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
     .province {
         fill: #000;
@@ -24,15 +27,29 @@
         opacity: 0.9;
         position: absolute;
     }
+	#mapid { height: 800px;
+			width: 800px};
   </style>
 </head>
 
 <body>
+  <div id="mapid"></div>
   <script>
-    
+		
+		
+	var map = L.map('mapid').setView([46.0, 5.20], 8);
+
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	L.marker([46.0, 5.20]).addTo(map)
+		.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+		.openPopup();
+
 		var width = 800,
   		  height = 800;
-
+/*
 		var svg = d3.select( "body" )
   		.append( "svg" )
 		  .attr( "width", width )
@@ -51,7 +68,7 @@
          "rgb(116,196,118)", "rgb(49,163,84)", "rgb(0,109,44)"]);
     
 
-      d3.json("rhone.geojson", function(json) {
+     d3.json("rhone.geojson", function(json) {
 		color.domain([0, 250]);
 		var value = Math.floor((Math.random() * 250) + 1);
         
@@ -73,6 +90,6 @@
             });
         		
 
-			});
+			}); */
   </script>
 </body>
